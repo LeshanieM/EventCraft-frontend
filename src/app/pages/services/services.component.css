@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+
+ 
+  .topic{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 120px 5% 60px;
+    text-align: center;
+    color: #2d2979;
+    font-weight: bolder;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.5s ease-out forwards;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .service-card:nth-child(1) { animation-delay: 0.1s; }
+  .service-card:nth-child(2) { animation-delay: 0.3s; }
+  .service-card:nth-child(3) { animation-delay: 0.5s; }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: #6b63ffa4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  #6C63FF;
+    font-size: 2rem;
+    padding: 5%;
+  }
+
+  .service-card h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .service-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .services-hero h1 {
+      font-size: 2rem;
+    }
+  }
