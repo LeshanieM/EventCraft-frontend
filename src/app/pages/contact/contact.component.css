@@ -1,0 +1,159 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #4c89eb 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #83c3f1 100%); 
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  max-width: 800px;
+  width: 100%;
+}
+
+.contact-info h2 {
+  color: #2c3e50;
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.contact-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 40px 0;
+  color: #34495e;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+}
+
+.info-item svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+  fill: #3498db;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.info-item p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+.social-links {
+  margin-top: 50px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.social-links a {
+  width: 60px;
+  height: 60px;
+  background: #f0f3f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  background: #3498db;
+}
+
+.social-links a:hover svg {
+  fill: white;
+}
+
+.social-links svg {
+  width: 25px;
+  height: 25px;
+  fill: #3498db;
+  transition: fill 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+  }
+  
+  .contact-info h2 {
+    font-size: 2.5rem;
+  }
+  
+  .info-item {
+    padding: 15px;
+    margin: 20px 0;
+  }
+  
+  .info-item svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+  
+  .info-item p {
+    font-size: 1.1rem;
+  }
+  
+  .social-links a {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.floating-bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
