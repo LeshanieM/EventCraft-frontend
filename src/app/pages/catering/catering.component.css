@@ -1,0 +1,131 @@
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e6f3ff 0%, #f3e6ff 100%);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #e3f2fd 0%, #83c3f1 100%); 
+    color: #1b236e;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Text */
+header .container h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #6f42c1; /* Dark Purple */
+}
+
+header .container p {
+    font-size: 1.1em;
+    color: #004085; /* Dark Blue */
+    font-weight: 300;
+}
+
+/* Catering Preview Section */
+.catering-preview {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Catering Card Styling */
+.catering-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.catering-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Catering Card Header */
+.catering-card h3 {
+    color: #6f42c1;
+    font-size: 1.6em;
+    margin-bottom: 12px;
+}
+
+
+/* Catering Card Description */
+.catering-card p {
+    color: #666;
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/* Cuisine Tag */
+.cuisine-tag {
+    background-color: #a8d8ff; /* Light Blue */
+    color: #000000; /* Black */
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 3px;
+    font-size: 12px;
+}
+
+/* Book Button */
+.book-button {
+    background: linear-gradient(45deg, #6f42c1, #4c6b8f); /* Dark Purple to Slightly Lighter Purple */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 12px;
+}
+
+.book-button:hover {
+    transform: translateY(-2px);
+    background: #5a2c8f; /* Darker Purple */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Menu Icon */
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* Price Tag */
+.price-tag1 {
+    color: #024894; /* Dark Blue */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 8px 0;
+}

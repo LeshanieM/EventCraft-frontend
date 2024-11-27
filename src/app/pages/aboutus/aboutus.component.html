@@ -1,1 +1,59 @@
-<p>aboutus works!</p>
+<app-navbar></app-navbar>
+<section class="hero">
+  <div class="floating-bubbles">
+    <svg width="100%" height="100%" style="position: absolute;">
+      <defs>
+        <circle id="bubble" r="5" fill="rgba(48, 155, 206, 0.6)        "/>
+      </defs>
+      <use href="#bubble" x="50" y="50">
+        <animate attributeName="y" from="120%" to="-20%" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="x" from="50" to="70" dur="3s" repeatCount="indefinite"/>
+      </use>
+      <use href="#bubble" x="150" y="50">
+        <animate attributeName="y" from="120%" to="-20%" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="x" from="150" to="120" dur="4s" repeatCount="indefinite"/>
+      </use>
+      <use href="#bubble" x="250" y="50">
+        <animate attributeName="y" from="120%" to="-20%" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="x" from="250" to="280" dur="3.5s" repeatCount="indefinite"/>
+      </use>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <h1>About Us</h1>
+    <h3>Welcome to Select Your Heart's Desire</h3>
+    <p>Turning your dreams into unforgettable moments, one celebration at a time.
+      At Select Your Heart’s Desire, we specialize in turning your dreams into reality. 
+      From elegant halls to lively bands and exquisite catering services, we provide everything you need to create unforgettable moments.
+    </p>
+   <button class="cta-button">Plan Your Perfect Event</button>
+  </div>
+</section>
+
+<section class="services">
+  <div class="services-grid">
+    <div class="service-card">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="var(--primary-color)">
+        <path d="M23 12c0-3.037-1.232-5.789-3.222-7.778s-4.741-3.222-7.778-3.222-5.789 1.232-7.778 3.222-3.222 4.741-3.222 7.778 1.232 5.789 3.222 7.778 4.741 3.222 7.778 3.222 5.789-1.232 7.778-3.222 3.222-4.741 3.222-7.778zm-21 0c0-2.486 1.006-4.734 2.636-6.364s3.878-2.636 6.364-2.636 4.734 1.006 6.364 2.636 2.636 3.878 2.636 6.364-1.006 4.734-2.636 6.364-3.878 2.636-6.364 2.636-4.734-1.006-6.364-2.636-2.636-3.878-2.636-6.364zm10.5 3.5h-2v-7h2v7zm-1-8.75c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/>
+      </svg>
+      <h3>Elegant Venues</h3>
+    
+    </div>
+    
+    <div class="service-card">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="var(--primary-color)">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-10h2v-4h-4zm-2 15.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+      <h3>Live Entertainment</h3>
+     
+    </div>
+    
+    <div class="service-card">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="var(--primary-color)">
+        <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+      </svg>
+      <h3>Exquisite Catering</h3>
+      
+    </div>
+  </div>
+</section>
