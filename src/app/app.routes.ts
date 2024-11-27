@@ -7,6 +7,8 @@ import { BandComponent } from './pages/band/band.component';
 import { HallComponent } from './pages/hall/hall.component';
 import { CateringComponent } from './pages/catering/catering.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ServicesComponent } from './pages/services/services.component';
+
 
 export const routes: Routes = [
     {
@@ -40,5 +42,10 @@ export const routes: Routes = [
     {
         path:"contact",
         component: ContactComponent
+    },
+  {
+        path:"services",
+        component: ServicesComponent
+
     }
 ];
