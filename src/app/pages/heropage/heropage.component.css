@@ -1,0 +1,352 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap";
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  :root {
+    --primary: #6C63FF;
+    --secondary: #2A2A5E;
+    --light: #F5F5F5;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  @keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+ 
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .hero-content {
+    width: 50%;
+    z-index: 2;
+    animation: slideIn 1s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+
+  
+  .start {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: rgba(255, 255, 255, 0.767);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    border: none;
+  }
+
+  .start:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+    background: white;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+    background: white;
+  }
+
+  .floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -30%;
+    top: 0;
+  }
+
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    animation: float 6s infinite ease-in-out;
+  }
+
+  .shape1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    top: 20%;
+    right: 10%;
+  }
+
+  .shape2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.15);
+    top: 40%;
+    right: 30%;
+    animation-delay: 1s;
+  }
+
+  .shape3 {
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+  }
+/* modal styles */
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  border: none;
+  justify-content: center;
+}
+
+.modal-header {
+  border-bottom: none;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.btn-close {
+  margin: 2%;
+}
+
+
+.form {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.input-container {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #f8f9fa;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: #007bff;
+}
+
+.input-container small {
+  display: none;
+  font-size: 0.875rem;
+  color: #e43d3d;
+  margin-top: 0.25rem;
+}
+
+.input-container input:invalid ~ small {
+  display: block;
+}
+
+.password-requirements {
+  font-size: 0.875rem;
+  color: #6c757d;
+  text-align: left;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  color: red;
+}
+
+.submit {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.submit:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-dialog-centered {
+ 
+  margin-left: 30%;
+}
+
+#already {
+  margin-bottom: 5%;
+  font-size: 0.875rem;
+ 
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 0 2%;
+  }
+
+  .hero-content {
+    width: 60%;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .start {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .modal-dialog-centered {
+    margin-left: 15%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .start {
+    font-size: 1rem;
+    padding: 0.7rem 1.8rem;
+  }
+
+  .modal-dialog-centered {
+    margin-left: 10%;
+    width: 80%;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .input-container input {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .start {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .modal-dialog-centered {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+  }
+
+  .input-container input {
+    font-size: 0.9rem;
+  }
+}

@@ -1,1 +1,80 @@
-<p>heropage works!</p>
+<body>
+  <app-navbar></app-navbar>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Craft Unforgettable Moments</h1>
+      <p class="description">Transform your vision into extraordinary events. From intimate gatherings to grand celebrations, we bring your dreams to life with meticulous planning and creative excellence.</p>
+      <button class="start" data-bs-toggle="modal" data-bs-target="#signupmodal">Start Planning</button>
+    </div>
+    <div class="floating-shapes">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
+    </div>
+  </section>
+</body>
+
+<!-- Customer signup Modal -->
+<div class="modal fade" id="signupmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="justify-content: center; display: flex;">
+        <form class="form" #loginForm="ngForm">
+          <p class="form-title">Create an account</p>
+          <div class="input-container">
+            <input type="text" name="name" placeholder="Enter Name" ngModel required />
+            <small class="text-danger" *ngIf="loginForm.submitted && loginForm.controls['name']?.errors?.['required']">
+              Name is required
+            </small>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" placeholder="Enter email" ngModel required />
+            <small class="text-danger" *ngIf="loginForm.submitted && loginForm.controls['email']?.errors?.['required']">
+              Email is required
+            </small>
+          </div>
+          <div class="input-container">
+            <input type="password" name="password" placeholder="Enter password" ngModel required />
+            <small class="text-danger" *ngIf="loginForm.submitted && loginForm.controls['password']?.errors?.['required']">
+              Password is required
+            </small>
+            <p class="password-requirements">
+              Password must contain at least 8 characters, including numbers and letters with no special characters
+            </p>
+          </div>
+          <button type="submit" class="submit">Sign in</button>
+          <p id="already">
+            Already have an account?
+            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">click here to Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Customer login modal -->
+<div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="justify-content: center; display: flex;">
+        <form class="form">
+          <p class="form-title">Login</p>
+          <div class="input-container">
+            <input type="email" name="email" placeholder="Enter email" required />
+          </div>
+          <div class="input-container">
+            <input type="password" name="password" placeholder="Enter password" required />
+          </div>
+          <button type="submit" class="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

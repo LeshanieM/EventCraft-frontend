@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from '../../common/navbar/navbar.component';
 
 @Component({
-  selector: 'app-hall',
+  selector: 'app-contact',
   standalone: true,
   imports: [NavbarComponent],
-  templateUrl: './hall.component.html',
-  styleUrl: './hall.component.css'
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.css'
 })
-export class HallComponent {
+export class ContactComponent {
 
 }
